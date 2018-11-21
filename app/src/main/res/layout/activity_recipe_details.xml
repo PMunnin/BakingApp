@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecipeDetailsActivity">
+
+    <TextView
+        android:id="@+id/recipe_name_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Default Recipe Name"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Display1" />
+
+    <TextView
+        android:id="@+id/recipe_detail_ingredients_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/recipe_details_ingredients_title_header_layout_margin"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/recipe_details_ingredients_title_header_padding"
+        android:text="@string/ingredients_list"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textStyle="italic"/>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/cardview_default_elevation">
+
+        <!-- The Ingredients fragment goes here -->
+        <FrameLayout
+            android:id="@+id/ingredient_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_add_to_widget"
+        android:text="@string/bt_add_to_widget"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/recipe_details_recipe_steps_header_layout_margin"
+        android:background="@color/colorAccent"
+        android:padding="@dimen/recipe_details_recipe_steps_header_padding"
+        android:text="@string/recipe_steps"
+        android:textAlignment="center"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Button"
+        android:textStyle="italic" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- The Recipe Steps fragment goes here -->
+        <FrameLayout
+            android:id="@+id/recipe_steps_fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+</LinearLayout>
