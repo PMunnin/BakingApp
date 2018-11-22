@@ -27,11 +27,17 @@ public class ActivityTest {
     public void checkRecipeSteps(){
         SystemClock.sleep(1000);
 
+        /**
+         * Clicking on the first recipe
+         */
         onView(withId(R.id.recyclerview)).perform(RecyclerViewActions
                 .actionOnItemAtPosition(0, click()));
 
+        /**
+         * The first recipe on the list is Nutella Pie
+         */
         onView(withId(R.id.recipe_name_title)).check(matches(withText("Nutella Pie")));
-        
+
         onView(withId(R.id.recipe_steps_recyclerview))
                 .perform(RecyclerViewActions.actionOnItemAtPosition(0, click()));
     }
